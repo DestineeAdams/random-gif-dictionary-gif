@@ -1,3 +1,6 @@
 .vs/
 .vscode/
-api_key.csv
+.env
+api_key.json
+node_modules/
+package-lock.json
