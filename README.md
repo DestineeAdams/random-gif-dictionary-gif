@@ -3,12 +3,12 @@
 
 
 
-\## project status <br>
+### project status <br>
  website is still in the development stage \
 
 
 
-\## TODO
+### TODO
 
 - [x] Design
 - [x] Mockups
@@ -26,3 +26,8 @@
     - [ ] test on tablet  - 2
     - [ ] test on mobile  - 3
 - [ ] launch
+
+
+### useful links
+- [how to hide api keys](https://youtu.be/wYALykLb5oY?t=2702)
+- [expressjs doc](https://expressjs.com/en/starter/static-files.html)
