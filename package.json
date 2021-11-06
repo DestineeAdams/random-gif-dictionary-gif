@@ -1,28 +1,28 @@
 {
-  "type": "module",
   "name": "random-gif-dictionary-gif",
   "version": "1.0.0",
   "description": "",
-  "main": "app.cjs",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.cjs"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DestineeAdams/random-gif-dictionary-gif.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Destinee Adams",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DestineeAdams/random-gif-dictionary-gif/issues"
   },
   "homepage": "https://github.com/DestineeAdams/random-gif-dictionary-gif#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "esm": "^3.2.25",
     "express": "^4.17.1",
     "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14"
   }
 }
