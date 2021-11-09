@@ -32,3 +32,6 @@
 - [Working with Data and APIs in JavaScript - The Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
 - [how to hide api keys](https://youtu.be/wYALykLb5oY?t=2702)
 - [expressjs doc](https://expressjs.com/en/starter/static-files.html)
+- [How to read and write JSON files in Node.js](https://attacomsian.com/blog/nodejs-read-write-json-files)
+- [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [reading json with node.js](https://blog.logrocket.com/reading-writing-json-files-nodejs-complete-tutorial/)
