@@ -1,10 +1,10 @@
 # random-gif-dictionary-gif
 
-
+### project description <br>
 
 
 ### project status <br>
- website is still in the development stage \
+ project is still in the development stage \
 
 
 
@@ -13,12 +13,14 @@
 - [x] Design
 - [x] Mockups
 - [x] do research
+    - [ ] node
+    - [ ] apis
 - [X] apply for apis
 - [ ] write project description
 - [ ] develop
    - [x] write html - 1
    - [ ] write CSS - 2
-   - [X] setup sever - 3
+   - [ ] setup sever - 3
    - [X] find apis - 4
    - [ ] get apis data - 5
 - [ ] Testing
