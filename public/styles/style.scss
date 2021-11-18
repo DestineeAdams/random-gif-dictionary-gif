@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(38, 8, 68);
+    color: rgb(241, 241, 241);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 50%;
+
+    #w{
+        font-size: xx-large;
+    }
+
+    #d{
+        font-size: larger;
+    }
+    
+    #i{
+        width: 75%;
+    }
+
+}
+
+.buttons{
+    // display: flex;
+    margin: 1em;
+    gap: 1em;
+}

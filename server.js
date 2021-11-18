@@ -7,12 +7,14 @@ const app = express();
 const port = 3001;
 const http = require('http');
 const https = require('https');
-const got = require('got');
-
+const events = require('events');
 var handleapis = require('./handleapis');
 
 
-
+var newword = new events.EventEmitter();
+newword.on("someEvent", function getnewdata() {
+  
+})
 
 
 

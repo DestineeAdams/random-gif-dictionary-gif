@@ -8,7 +8,7 @@
     <link rel="stylesheet" type=text/css href="\styles\style.css">
     <link rel="icon" type="image/x-icon" href="\img\favicon.ico">
 
-    
+
 
 
 
@@ -16,17 +16,26 @@
 </head>
 
 <body>
-    <h1> The Random Gif Dictionary</h1>
 
-    <div class="content">
-        <p id="w"></p>
-        <p id="d"></p>
-        <img id="i" src="" alt="the gif based on the randomly picked word" width="35%">
+
+    <div class="container">
+        <h1> The Random Gif Dictionary</h1>
+
+        <div class="content">
+            <p id="w"></p>
+            <p id="d"></p>
+            <img id="i" src="" alt="the gif based on the randomly picked word" >
+        </div>
+
+
+        <div class="buttons">
+            <button onClick="reload()"> new word </button>
+            <button type="button" onclick="location.href='about.html';" value="Go to about project page"> about
+            </button>
+        </div>
+
     </div>
 
-    <button onClick="window.location.reload();"> new word </button>
-
-    <button type="button" onclick="location.href='about.html';" value="Go to about project page"> about </button>
 
 
 
