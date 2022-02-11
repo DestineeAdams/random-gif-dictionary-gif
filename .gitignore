@@ -1,4 +1,7 @@
 .vs/
 .vscode/
 .env
-api_key.json
+secret.txt
+
+# Environments
+gifDicGen
