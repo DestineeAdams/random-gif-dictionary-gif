@@ -2,6 +2,7 @@
 .vscode/
 .env
 secret.txt
+__pycache__
 
 # Environments
 gifDicGen

@@ -1,0 +1,16 @@
+body {
+  background-color: #393E41;
+  color: #F6F7EB;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #E94F37;
+}
+/*# sourceMappingURL=style.css.map */

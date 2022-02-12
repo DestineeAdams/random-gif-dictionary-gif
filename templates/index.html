@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type=text/css href="{{url_for('static', filename = 'styles/style.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = '/img/favicon.ico')}}">
+
+
+
+
+
+    <title>The gif dictionary</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1> The Random Gif Dictionary</h1>
+
+        <div class="content">
+            <p> {{term}} </p>
+            <p> {{defintion}} </p>
+            <!-- <img src={{gif}} alt="a gif based on the randomly picked word"> -->
+            <iframe src={{gif}} width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href={{gif}}></a></p>
+        </div>
+     
+
+
+        <div class="buttons">
+            <button onClick="window.location.reload();">Refresh Page</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
