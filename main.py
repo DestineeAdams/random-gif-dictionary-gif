@@ -2,42 +2,61 @@ from urllib import response
 import requests
 import json
 
-data = ["","",""]
 
+data = {"term": None, "defintion": None, "gif": None}
+
+keys = {"wordnik": None, "gihpy": None}
+
+
+def getAPI_KEYS():
+    f = open("secret.txt","r")
+    lines = f.readlines()
+
+    keys["wordnik"] = lines[0].replace("\n","")
+    keys["gihpy"] = lines[1]
+
+    f.close()
+    
 
 def clearDatalist():
-    data[0] = None
-    data[1] = None
-    data[2] = None
+    data["term"] = None
+    data["defintion"] = None
+    data["gif"] = None
+    
+    keys['wordnik'] = None
+    keys['gihpy'] = None
+    
+
+
 
 def getWord():
-    r = requests.get('https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=2&maxLength=5&api_key=9ab90adaddb31b0f1e0080fe71a0c4b6262afe4fe3fb8f6ad')
+    
+    r = requests.get('https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=2&maxLength=5&api_key=' + keys['wordnik'])
     
     resjson = r.json()
-    data[0] = resjson["word"]
+    # print(resjson)
+    data["term"] = resjson["word"]
 
 def getDef():
     
     params = {
-        "q":data[0],
-        "apiKey":"9ab90adaddb31b0f1e0080fe71a0c4b6262afe4fe3fb8f6ad",
+        "q":data["term"],
+        "apiKey":keys['wordnik'],
         "limit":"2"
     }
     
-    url = 'https://api.wordnik.com/v4/word.json/jet/definitions?limit=2&includeRelated=false&useCanonical=false&includeTags=false&api_key=YOURAPIKEY'
-    
     url = 'https://api.wordnik.com/v4/word.json/' + params["q"] + '/definitions?limit=' + params["limit"] + '&includeRelated=false&useCanonical=false&includeTags=false&api_key=' + params["apiKey"]
-    print(url)
+   
     
     r = requests.get(url)
     resjson = r.json()
     resjson = resjson[1]
-    data[1] = resjson["text"]
+    data["defintion"] = resjson["text"]
     
 def getGif():
     params = {
         "q":"funnycat",
-        "apiKey":"eAwrFQNJYjlWWzsTvn8mMX7h2CScyjYS",
+        "apiKey":keys['gihpy'],
         "limit":"1"
     }
     
@@ -48,13 +67,16 @@ def getGif():
     resjson = resjson["data"]
     resjson = resjson[0]
     resjson = resjson["embed_url"]
-    data[2] = resjson
+    data["gif"] = resjson
 
-    
-clearDatalist()
+
+
+getAPI_KEYS()
+# clearDatalist()
+
 getWord()
 getDef()
 getGif()
 
-for i in data:
-    print(i)
+print(data)
+print(keys)
