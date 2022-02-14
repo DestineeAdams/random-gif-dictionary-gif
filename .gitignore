@@ -1,8 +1,16 @@
 .vs/
 .vscode/
 .env
+.pyc
+.txt
+errors.txt
+output.txt
 secret.txt
+
 __pycache__
+
+
+
 
 # Environments
 gifDicGen

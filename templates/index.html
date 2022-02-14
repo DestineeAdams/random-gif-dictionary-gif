@@ -19,24 +19,34 @@
 
 
     <div class="container">
-        <h1> The Random Gif Dictionary</h1>
+        
 
         <div class="content">
+            <h1> The Random Gif Dictionary</h1>
+
             <p> {{term}} </p>
+
             <p> {{defintion}} </p>
-            <!-- <img src={{gif}} alt="a gif based on the randomly picked word"> -->
-            <iframe src={{gif}} width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href={{gif}}></a></p>
+
+            <iframe src={{gif}} width="auto" height="auto" alt="a gif based on the randomly picked word"></iframe><p><a href={{gif}}></a></p>
+            
+            <div class="buttons">
+                <p>
+                    <button onClick="window.location.reload();">NEW WORD</button>
+                </p>
+                
+                <p>
+                    <button>about</button>
+                </p>
+    
+            </div>
+            
+
         </div>
-     
-
-
-        <div class="buttons">
-            <button onClick="window.location.reload();">Refresh Page</button>
-        </div>
-
 
     </div>
 
+  
 </body>
 
 </html>

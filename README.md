@@ -17,3 +17,4 @@ get more common words
     #F6F7EB
     #E94F37
     #393E41
+    #e2ff99
