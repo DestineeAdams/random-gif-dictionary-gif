@@ -1,18 +1,21 @@
 from pickle import NONE
 from urllib import response
 import requests
-
+import os
+from dotenv import load_dotenv
+load_dotenv()  # take environment variables from .env
 
 
 data = {"term": None, "defintion": None, "gif": None}
 
-keys = {"WordsAPI": None, "gihpy": None}
+keys = {"WordsAPI": os.getenv("WordsAPI"), "gihpy": os.getenv("gihpy")}
+
 
 
 
 # use this funtion when use as module 
 def getData():
-    setAPI_KEYS()
+   
 
     getSetWord()
     # getSetDef()
@@ -23,15 +26,6 @@ def getData():
 def setData(key, vulue):
     data[key] = vulue
     
-
-def setAPI_KEYS():
-    f = open("secret.txt","r")
-    lines = f.readlines()
-
-    keys["WordsAPI"] = lines[0].replace("\n","")
-    keys["gihpy"] = lines[1]
-
-    f.close()
 
     
 def clearDatalist(key):
@@ -124,7 +118,6 @@ def getSetGif():
 
     
 
-# setAPI_KEYS()
 # getSetWord()
 # getSetDef()
 # getSetGif()
