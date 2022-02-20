@@ -15,13 +15,24 @@ keys = {"WordsAPI": os.getenv("WordsAPI"), "gihpy": os.getenv("gihpy")}
 
 # use this funtion when use as module 
 def getData():
-   
+    setAPI_KEYS()
 
     getSetWord()
     # getSetDef()
     getSetGif()
 
     return data
+
+
+def setAPI_KEYS():
+    f = open("secret.txt","r")
+    lines = f.readlines()
+
+    keys["WordsAPI"] = lines[0].replace("\n","")
+    keys["gihpy"] = lines[1]
+
+    f.close()
+
 
 def setData(key, vulue):
     data[key] = vulue
