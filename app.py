@@ -17,7 +17,3 @@ def index():
   
     return render_template("index.html", term = content["term"], defintion = content["defintion"], gif = str(content["gif"]))
 
-
-#    set FLASK_APP=app.py
-#    set FLASK_ENV=development
-#    flask run

@@ -8,7 +8,7 @@
 - https://rapidapi.com
 - https://pythonspot.com/read-file/
 - https://www.youtube.com/watch?v=wOr6PkZwEbk
-
+- https://pushbots.com/for/education/
 
 ### note
 get more common words
