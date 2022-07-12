@@ -80,4 +80,3 @@ def getData():
     return data
 
 
-print(getData())
