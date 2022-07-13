@@ -2,6 +2,7 @@ from pickle import NONE
 from urllib import response
 import requests, os, json
 from dotenv import load_dotenv
+
 load_dotenv()  # take environment variables from .env
 
 data = {"term": "share", "backupterm": None,"defintion": None, "gif": None}
