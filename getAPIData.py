@@ -1,14 +1,11 @@
 from pickle import NONE
 from urllib import response
-from itsdangerous import json
 import requests, os, json
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env
 
-
 data = {"term": "share", "backupterm": None,"defintion": None, "gif": None}
 
-rawData = None
 
 keys = {"WordsAPI": os.getenv("WordsAPI"), "gihpy": os.getenv("gihpy")}
 
@@ -68,7 +65,7 @@ def getJsonGifpy():
     
     response = response.json()
     response = response["data"][0]["embed_url"]
-    print(response)
+   
 
     data["gif"] = response
 
@@ -80,4 +77,5 @@ def getData():
     return data
 
 
-print(getData())
+getData()
+
