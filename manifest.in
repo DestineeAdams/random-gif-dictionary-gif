@@ -1,0 +1,4 @@
+
+graft random-gif-dictionary-gif/static
+graft random-gif-dictionary-gif/templates
+global-exclude *.pyc
