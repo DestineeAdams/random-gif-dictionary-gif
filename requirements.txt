@@ -12,7 +12,7 @@ Jinja2==3.1.2
 Markdown==3.3.6
 MarkupSafe==2.1.1
 python-dotenv==0.19.2
-./dist/random_gif_dictionary_gif-1.0.0-py3-none-any.whl==1.0.0
+./dist/random_gif_dictionary_gif-1.0.0-py3-none-any.whl
 requests==2.27.1
 urllib3==1.26.8
 Werkzeug==2.1.2
