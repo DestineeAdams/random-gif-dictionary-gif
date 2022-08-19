@@ -66,10 +66,10 @@ def getJsonGifpy():
 
     url = "https://giphy.p.rapidapi.com/v1/gifs/search"
 
-    querystring = {"q":data["term"],"api_key": os.getenv("gihpy")}
+    querystring = {"q":data["term"], "api_key": os.getenv("gihpy"), "rating":"pg-13"}
 
     headers = {
-        "X-RapidAPI-Key":   os.getenv("gihpyRapidAPIkey"),
+        "X-RapidAPI-Key": os.getenv("RapidAPIKey"),
         "X-RapidAPI-Host": "giphy.p.rapidapi.com"
     }
 
