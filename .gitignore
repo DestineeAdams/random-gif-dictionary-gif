@@ -1,4 +1,5 @@
 
+
 .env
 
 # dependencies
@@ -44,6 +45,10 @@ yarn-error.log*
 .npm/
 dist
 
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,flask,python,dotenv,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,flask,python,dotenv,venv
 
 ### dotenv ###
 .env
