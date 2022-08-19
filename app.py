@@ -1,6 +1,7 @@
+from contextlib import nullcontext
 from flask import Flask, render_template, url_for
 import getAPIData as gad
-import os
+import os, json
 
 app = Flask(__name__)
 
@@ -10,9 +11,11 @@ if __name__ == '__app__':
 
 
 
-@app.route('/')
-def index():
+
+@app.route('/words')
+def words():
     content = gad.getData()
-    return render_template("index.html", term = content["term"], defintion = content["defintion"], gif = str(content["gif"]))
-    # return render_template("index.html", term = "tying", defintion = " the act of tying or binding things together ", gif = "https://giphy.com/gifs/poseonfx-kb9LpghGziivyHPKUH")
+
+    # return json.dumps(content)
+    return content
 
