@@ -1,14 +1,13 @@
 from pickle import NONE
+import re
 from urllib import response
-from itsdangerous import json
 import requests, os, json
 from dotenv import load_dotenv
+
 load_dotenv()  # take environment variables from .env
 
+data = {"term": None, "backupterm": None,"defintion": None, "gif": None}
 
-data = {"term": "share", "backupterm": None,"defintion": None, "gif": None}
-
-rawData = None
 
 keys = {"WordsAPI": os.getenv("WordsAPI"), "gihpy": os.getenv("gihpy")}
 
@@ -26,11 +25,11 @@ def getJsonRandomWords():
     }
 
     response = requests.request("GET", url, headers=headers)
-
+    print(response)
     response = response.text
-
-    
+    print(response)
     data["term"] = response
+    # print("-------------------------------------------------",data["term"])
     
 
 # from words api
@@ -45,11 +44,21 @@ def getJsonDefinitions():
     }
 
     response = requests.request("GET", url, headers=headers)
+    print(response)
+    # print(type(response.status_code))
 
-    response = response.json()
-    response = response["definitions"][0]["definition"]
+    if response.status_code == 200:
 
-    data["defintion"] = response
+        response = response.json()
+        response = response["definitions"][0]["definition"]
+
+        data["defintion"] = response
+
+    else:
+        data["term"] = "Share"
+        data["defintion"] = "A part or portion belonging to, distributed to, contributed by, or owed by a person or group."
+        data["gif"] = "https://giphy.com/embed/h2i4CqO3IFwBKLc4DC"
+    # IndexError: list index out of range
 
 # from gihpy api
 def getJsonGifpy():
@@ -65,18 +74,21 @@ def getJsonGifpy():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    
+    print(response)
     response = response.json()
     response = response["data"][0]["embed_url"]
-    print(response)
+   
 
     data["gif"] = response
 
 def getData():
+
     getJsonRandomWords()
     getJsonDefinitions()
     getJsonGifpy()
-
+    
     return data
 
+
+getData()
 
