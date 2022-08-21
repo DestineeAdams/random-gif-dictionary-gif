@@ -3,6 +3,7 @@ import "./styles/style.css"
 
 function App() {
 
+
   const [data, setData] = useState(0)
   
   useEffect (() => {
@@ -10,7 +11,7 @@ function App() {
         res => res.json()
       ).then(
         data => {
-
+          console.log(data);
           setData(data)
         }
       )
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className='container'>
+      <h1> random gif dictionary </h1>
 
       <div className='content'>
 

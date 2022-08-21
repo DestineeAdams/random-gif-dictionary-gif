@@ -13,15 +13,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+.content {
   background-color: #000000;
   width: 75%;
   border: 2px solid #000000;
-  padding: 10px;
+  padding: 30px;
   border-radius: 25px;
-}
-
-.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

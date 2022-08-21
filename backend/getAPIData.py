@@ -25,11 +25,11 @@ def getJsonRandomWords():
     }
 
     response = requests.request("GET", url, headers=headers)
-
+    print(response)
     response = response.text
-
-    
+    print(response)
     data["term"] = response
+    # print("-------------------------------------------------",data["term"])
     
 
 # from words api
@@ -44,7 +44,7 @@ def getJsonDefinitions():
     }
 
     response = requests.request("GET", url, headers=headers)
-
+    print(response)
     # print(type(response.status_code))
 
     if response.status_code == 200:
@@ -66,15 +66,15 @@ def getJsonGifpy():
 
     url = "https://giphy.p.rapidapi.com/v1/gifs/search"
 
-    querystring = {"q":data["term"],"api_key": os.getenv("gihpy")}
+    querystring = {"q":data["term"], "api_key": os.getenv("gihpy"), "rating":"pg-13"}
 
     headers = {
-        "X-RapidAPI-Key":   os.getenv("gihpyRapidAPIkey"),
+        "X-RapidAPI-Key": os.getenv("RapidAPIKey"),
         "X-RapidAPI-Host": "giphy.p.rapidapi.com"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    
+    print(response)
     response = response.json()
     response = response["data"][0]["embed_url"]
    
@@ -82,13 +82,12 @@ def getJsonGifpy():
     data["gif"] = response
 
 def getData():
-    
+
     getJsonRandomWords()
     getJsonDefinitions()
     getJsonGifpy()
- 
+    
     return data
 
 
 getData()
-
