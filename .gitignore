@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,dotenv,flask,python,venv,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,dotenv,flask,python,venv,visualstudiocode
 
+./runtime.txt
+
 ### dotenv ###
 .env
 
