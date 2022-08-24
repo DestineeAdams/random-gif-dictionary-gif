@@ -1,20 +1,15 @@
-from contextlib import nullcontext
-from flask import Flask, render_template, url_for
+from flask import Flask
 import getAPIData as gad
-import os, json
-
-app = Flask(__name__)
-
-if __name__ == '__app__':
-    app.run(debug=False)
 
 
+app = Flask(__name__, static_folder='../front/build', static_url_path='/')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
 
 
-
-@app.route('/words')
+@app.route('/words', methods=['GET'])
 def words():
     content = gad.getData()
-
-    # return json.dumps(content)
     return content
+

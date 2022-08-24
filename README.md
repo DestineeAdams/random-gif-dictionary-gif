@@ -1,5 +1,9 @@
 
-
+### APIs
+this app uses 3 APIS
+- https://rapidapi.com/sheharyar566/api/random-words5
+- https://rapidapi.com/dpventures/api/wordsapi
+- https://rapidapi.com/giphy/api/giphy
 
 ### useful links
 - https://docs.python-requests.org/en/latest/
