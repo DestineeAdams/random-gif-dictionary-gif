@@ -5,10 +5,12 @@ _________________________
 
 ### APIs
 this app uses 3 APIS
-
+https://github.com/mcnaveen/Random-Words-API
+https://random-words-api.vercel.app/word/
 
 ### useful links
 https://www.geeksforgeeks.org/create-virtual-environment-using-venv-python/
+
 
 ### note
 
