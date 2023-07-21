@@ -24,17 +24,21 @@
 
 
 
-    <div class="d-flex flex-column justify-content-center shadow-lg bg-black p-3 mx-auto my-2 rounded text-center align-middle w-75">
-    
-        <p class="text-danger text-capitalize fs-2"> word </p>
+    <div
+        class="d-flex flex-column justify-content-center shadow-lg bg-black px-1 py-3 mx-auto my-2 rounded text-center align-middle w-25">
+
+        <p class="text-danger text-capitalize fs-2 mx-auto w-50"> {{word}} </p>
+
+        <p class="text-danger mx-auto w-50"> {{definition}} </p>
         
-        <p class="text-danger mx-5"> define Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil atque, odio eius minus fuga iure
-            expedita inventore molestias. Eligendi quae nesciunt dicta earum illo maxime pariatur unde consectetur, a
-            amet.</p>
-        <img class="w-25 rounded mx-auto my-5" src="static/ti84.png" alt="gaint ti-84 in the middle of a city street saying hi">
         
+        <iframe src="{{gifURL}}" class="w-50 rounded mx-auto"></iframe>
+       
+
         <br>
         
+        
+     
         <button type="button" class="btn btn-danger mx-auto my-2">new word</button>
     </div>
 </body>
