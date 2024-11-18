@@ -20,27 +20,22 @@
 </head>
 
 <body>
-    <div class="shadow-lg p-3 mb-4">
-        <h1 class="text-center text-uppercase fw-bold text-white">the random gif dictionary</h1>
-    </div>
+
+    <h1>the random gif dictionary</h1>
 
 
 
+    <div class="content">
 
+        <h3> {{word}} </h3>
 
-    <div
-        class="d-flex flex-column justify-content-center shadow-lg bg-black px-1 py-3 mx-auto my-2 rounded text-center align-middle w-25">
-
-        <p class="text-danger text-capitalize fs-2 mx-auto w-50"> {{word}} </p>
-
-        <p class="text-danger mx-auto w-50"> {{definition}} </p>
+        <p> {{definition}} </p>
         
         
-        <iframe src="{{gifURL}}" class="w-50 rounded mx-auto"></iframe>
-       
-        <br>
+        <!-- <iframe src="{{gifURL}}"></iframe> -->
+        <img src="../static/ti84.png">
      
-        <button type="button" class="btn btn-danger mx-auto my-2" onClick="reloadThePage()">new word</button>
+        <button type="button" onClick="reloadThePage()">new word</button>
         
     </div>
 </body>
